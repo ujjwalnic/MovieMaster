@@ -13,7 +13,8 @@ import { AuthAdminGuard } from './guard/auth-admin.guard';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { OrderDetailComponent } from "./Components/order-detail/OrderDetailComponent";
 
-const routes: Routes = [{ path:'', redirectTo: '/latest-movies', pathMatch:'full'},
+const routes: Routes = [
+{ path:'', redirectTo: '/latest-movies', pathMatch:'full'},
 { path:'latest-movies', component: LatestMoviesComponent, canActivate: [AuthUserGuard] },
 { path:'contactus', component: ContactUsComponent, canActivate: [AuthUserGuard] },
 { path:'movie-list', component: MovieListComponent, canActivate: [AuthUserGuard]  },

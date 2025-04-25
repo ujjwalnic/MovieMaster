@@ -22,6 +22,8 @@ import { HasRoleDirective } from './directive/has-role.directive';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { OrderDetailComponent } from "./Components/order-detail/OrderDetailComponent";
 import { LogInterceptor } from './interceptor/log.interceptor';
+import { MovieDetailModule } from './Components/movie-detail/movie-detail.module';
+import { MovieEditModule } from './Components/movie-edit/movie-edit.module';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { LogInterceptor } from './interceptor/log.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    MovieDetailModule,
+    MovieEditModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: LogInterceptor, multi: true },
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'legacy'}}],
